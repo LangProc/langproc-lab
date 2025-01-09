@@ -1,2 +1,2 @@
-0.000
-[a] 2
+Hello \there world 
+Number of comments and attributes removed: 1.

@@ -7,9 +7,9 @@ The three exercises are:
 
 1 - [Lexers and regular expressions](1-regexes) (due Tue 30 Jan 2024 at 23:59).
 
-2 - [Parsers and ASTs](2-parsers) (due Tue ~~13 Feb~~ **20 Feb** 2024 at 23:59). [Extended because I forgot about mid-term week.]
+2 - [Parsers and ASTs](2-parsers) (due Tue 13 Feb 2024 at 23:59).
 
-3 - [Code Generation](3-codegen) (due Tue ~~27 Feb~~ **5 Mar** 2024 at 23:59). [Extended because I forgot about mid-term week.]
+3 - [Code Generation](3-codegen) (due Tue 27 Mar 2024 at 23:59).
 
 The primary purpose of the lab exercises is to ensure that everyone learns the basic skills needed for the coursework. They are not designed to be too challenging, but they do require you to get to grips with several tools and concepts that you will need later.
 
@@ -49,11 +49,9 @@ You can enter the virtual machine described by the Dockerfile by going to the di
 	
 (The `.` at the end is part of the command, by the way. It tells Docker to look in the current directory for the Dockerfile script.) Then create a "container" so that you can enter the virtual machine by running:
 
-```sh
-docker run -it -v ".:/langproc-2023-lab" -w "/langproc-2023-lab" --name "compilers_labs_machine" compilers_labs
-```
-
-You are now in an Ubuntu 22.04 shell with all the required tools installed. (By the way, the `-it` flag instructs Docker to create a shell through which you can interact with the virtual machine. The `-v ".:/langproc-2023-lab"` and `-w /langproc-2023-lab` flags mean that your host machine's files are accessible to your virtual machine, in the `/langproc-2023-lab directory`.) 
+    docker run -it -v "`pwd`:`pwd`" -w "`pwd`" --name "compilers_labs_machine" compilers_labs
+	
+You are now in an Ubuntu 22.04 shell with all the required tools installed. (By the way, the `-it` flag instructs Docker to create a shell through which you can interact with the virtual machine. The `-v pwd:pwd` and `-w pwd` flags mean that your host machine's files are accessible to your virtual machine.) 
 
 When you're finished, you can leave the shell by typing:
 

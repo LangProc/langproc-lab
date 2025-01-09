@@ -1,20 +1,20 @@
 CPPFLAGS += -W -Wall -g 
 
-# This avoids error: ‘fileno’ was not declared in this scope
+# This avoids error: 'fileno' was not declared in this scope
 CPPFLAGS += -std=c++0x
 
-# Avoid warnings about yyunput not used
+# Avoid warnings about yyunput not being used
 CPPFLAGS += -Wno-unused-function
 
-all : histogram
+all: nocomment
 
-histogram_lexer.yy.cpp : histogram_lexer.flex
-	flex -o histogram_lexer.yy.cpp  histogram_lexer.flex
+nocomment_lexer.yy.cpp: nocomment_lexer.flex
+	flex -o nocomment_lexer.yy.cpp  nocomment_lexer.flex
 
-histogram : histogram_lexer.yy.o histogram_main.o
-	g++ $(CPPFLAGS) -o histogram  histogram_lexer.yy.o histogram_main.o
+nocomment: nocomment_lexer.yy.o nocomment_main.o
+	g++ $(CPPFLAGS) -o nocomment nocomment_lexer.yy.o nocomment_main.o
 
-clean :
-	-rm -f histogram histogram.exe histogram_main.o histogram_lexer.yy.o
+clean:
+	-rm -f nocomment nocomment.exe nocomment_main.o nocomment_lexer.yy.o
 	-rm -f *.yy.cpp
 	-rm -f test/out/*

@@ -1,1 +1,2 @@
-1.000
+Hello \(* great *) world
+Number of comments and attributes removed: 1.

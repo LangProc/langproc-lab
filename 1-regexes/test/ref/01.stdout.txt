@@ -1,2 +1,3 @@
-0.000
-[a] 1
+Hello world
+Bye
+Number of comments and attributes removed: 0.

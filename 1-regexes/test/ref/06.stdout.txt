@@ -1,4 +1,2 @@
-0.000
-[a] 2
-[aa] 2
-[aaa] 1
+Hello  world
+Number of comments and attributes removed: 2.

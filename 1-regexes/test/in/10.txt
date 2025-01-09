@@ -1,1 +1,6 @@
-1 2 3 45
+module foo ()
+  wire \hello;
+  wire \//go away;
+  //go away
+  wire (* hello world *) there;
+endmodule
