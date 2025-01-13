@@ -1,7 +1,6 @@
 module foo ()
   wire \hello;
   wire \//go away;
-  
-  wire  there;
+    wire  there;
 endmodule
 Number of comments and attributes removed: 2.
