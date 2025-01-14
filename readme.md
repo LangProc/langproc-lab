@@ -1,17 +1,17 @@
-Lab exercises for Compilers 2023/24
+Lab exercises for Compilers 2024/25
 ===============================================
 
 This repository contains the specifications for the three lab exercises for the Compilers module.
 
 The three exercises are:
 
-1 - [Lexers and regular expressions](1-regexes) (due Tue 30 Jan 2024 at 23:59).
+1 - [Lexers and regular expressions](1-regexes) (due Fri 31 Jan 2025 at 15:00).
 
-2 - [Parsers and ASTs](2-parsers) (due Tue 13 Feb 2024 at 23:59).
+2 - [Parsers and ASTs](2-parsers) (due Fri 07 Feb 2025 at 15:00).
 
-3 - [Code Generation](3-codegen) (due Tue 27 Mar 2024 at 23:59).
+3 - [Code Generation](3-codegen) (due Fri 14 Feb 2025 at 15:00).
 
-The primary purpose of the lab exercises is to ensure that everyone learns the basic skills needed for the coursework. They are not designed to be too challenging, but they do require you to get to grips with several tools and concepts that you will need later.
+The primary purpose of the lab exercises is to ensure that everyone learns the basic skills needed for the coursework. They are not designed to be _too_ challenging, but they do require you to get to grips with several tools and concepts that you will need later.
 
 
 Assessment and Feedback
@@ -114,7 +114,7 @@ Setting up your repository
 
 A private repository has been created for you, which you can clone using the following command (but replace `${LOGIN}` with your college login):
 ````
-git clone https://github.com/LangProc/langproc-2023-lab-${LOGIN}.git
+git clone https://github.com/LangProc/langproc-2024-lab-${LOGIN}.git
 ````
 
 You will need to use a personal access token (PAT) to authenticate yourself. You can set up a token by following [these instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). Alternatively, you could clone the repository using SSH, having set up an SSH key by following [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
@@ -135,7 +135,7 @@ Synchronising with the specification repository
 
 If there are any changes to the specification (e.g. bugs or updates), you can incorporate them into your version by pulling again from the specification repo. First you need to make sure it is included as a "remote":
 ````
-git remote add spec https://github.com/LangProc/langproc-2023-lab.git
+git remote add spec https://github.com/LangProc/langproc-2024-lab.git
 ````
 If you now list the remotes, you should see both "origin" (your private repo), and "spec" (the specification repo):
 ````
