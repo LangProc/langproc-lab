@@ -9,9 +9,17 @@ The three exercises are:
 
 2 - [Parsers and ASTs](2-parsers) (due Fri 07 Feb 2025 at 15:00).
 
-3 - [Code Generation](3-codegen) (due Fri 14 Feb 2025 at 15:00).
+3 - [Code Generation](3-codegen) (due Fri 21 Feb 2025 at 15:00).
 
-The primary purpose of the lab exercises is to ensure that everyone learns the basic skills needed for the coursework. They are not designed to be _too_ challenging, but they do require you to get to grips with several tools and concepts that you will need later.
+Rationale for deadlines: 
+
+- There are two lab sessions (20 Jan and 27 Jan) before the first exercise is due.
+- There is one further lab session (3 Feb) before the second exercise is due.
+- There is one further lab session (17 Feb) before the third exercise is due.
+- No lab will be held on 10 Feb because it is mid-term exams week.
+- The first exercise gets a bonus lab session to give students a bit of extra time to get used to the software environment (Docker, and so on).
+
+The primary purpose of the lab exercises is to ensure that everyone learns the basic skills needed for the main coursework. They are not designed to be _too_ challenging, but they do require you to get to grips with several tools and concepts that you will need later.
 
 
 Assessment and Feedback
