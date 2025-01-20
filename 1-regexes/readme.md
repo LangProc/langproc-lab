@@ -3,6 +3,9 @@ Lab 1: Lexers and regular expressions
 
 This lab is about lexers and regular expressions. It is intended to give you enough working knowledge and experience to be able to design and implement the C lexer for your compiler.
 
+Please refer to [this helpful site](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.html) from the University of Virginia, for information on flex as a tool.\
+The [Rules page](https://www.cs.virginia.edu/~cr4bd/flex-manual/Patterns.html) is particular helpful regarding flex syntax.
+
 Specification
 -------------
 
