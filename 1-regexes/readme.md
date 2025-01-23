@@ -3,6 +3,10 @@ Lab 1: Lexers and regular expressions
 
 This lab is about lexers and regular expressions. It is intended to give you enough working knowledge and experience to be able to design and implement the C lexer for your compiler.
 
+Changelog
+---------
+- **23-Jan-2025:** Added clarification that comments inside attributes should not count towards the number of comments removed.
+
 Specification
 -------------
 
@@ -16,7 +20,7 @@ Write a tool using Flex that reads a stream of ASCII characters, and processes i
 
 - If any other character is encountered, ignore it and move to the next character in the stream.
 
-Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed.
+Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed. _[**Edit 23-Jan-2025:** If a comment is nested inside an attribute, then it is automatically removed when the attribute is removed, and does not need removing explicitly; therefore, it doesn't count towards the number of comments removed. The [result](test/ref/09.stdout.txt) of [test 9](test/in/09.txt) clarifies this behaviour.]_
 
 As an example, if the input stream looks like this:
 
