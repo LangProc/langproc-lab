@@ -10,9 +10,9 @@ class Variable
 private:
     std::string id;
 public:
-    Variable(const std::string &_id)
-        : id(_id)
-    {}
+    Variable(const std::string *_id)
+        : id(*_id)
+    { delete _id; }
 
     const std::string getId() const
     { return id; }
