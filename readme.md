@@ -37,6 +37,8 @@ Test environment
 
 The target environment for the labs (and the coursework) is Ubuntu 22.04. It is strongly suggested that you do your final testing before each submission in this environment, otherwise you are likely to hit incompatibility problems, which may mean your program won't build in my test environment. Those using Mac OS should watch out in particular, as the build environment is often subtly different.
 
+For those using VSCode, or another editor that supports development within a virtual environment, please see the [DevContainer section](#in-a-dev-container) for info on how to set this up for a smoother development experience.
+
 If you want to work on your own machine, you can install a version of Ubuntu
 quite easily. For this, we recommend 3 options:
 - [Docker](#docker)
@@ -78,7 +80,29 @@ and then removing the image by typing:
 
 	docker images
 	docker rmi compilers_labs
-	
+
+### In a Dev Container
+**Requirements:**
+- Above [Docker requirements](#docker)
+- [VSCode](https://code.visualstudio.com)
+  - [Dev Containers Extension](vscode:extension/ms-vscode-remote.remote-containers)
+
+`.devcontainer/` contains a [devcontainer config file](.devcontainer/devcontainer.json), which is read by the `Dev Containers` Extension to set up a container, in this case, based on the [Dockerfile](Dockerfile).
+
+If `Dev Containers` is already installed, opening VSCode in the root directory (the one with the Dockerfile in it), should cause the extension to prompt you (bottom-right) to `Reopen in Container`, if not, you can do it manually:
+
+- Ensure the Docker Engine is running
+- Open VSCode's **Command Palette**
+  - `Ctrl+Shift+P` is the default shortcut on Windows/Ubuntu
+- Run `Dev Containers: Reopen in Container`
+
+> [!WARNING]
+> If you delete the Docker Container that `Dev Containers` creates for this environment at any point, you'll have to rebuild this container before continuing.\
+> The name for the *Images*, for these Containers, tend to be of the format:\
+> `vsc-{repo_name}-{hex_string}`
+
+I'm only aware of this working for VSCode and Docker, if you're able to get this working for another pair of editor and virtualiser, please let us know.
+
 ## Vagrant
 **Requirements:**
 - [VirtualBox](https://www.virtualbox.org/)
@@ -206,4 +230,4 @@ You can repeat this process as many times as you want, up until the deadline.
 Acknowledgements
 ================
 
-The exercises were devised by David Thomas (course lecturer until 2017-18), and are nowadays maintained by [John Wickerson](https://johnwickerson.github.io/). I'd like to thank Quentin Corradi, Yann Herklotz, Shuyuan Liu, James Nock, Michalis Pardalos, Simon Staal, and Samuel Wang for suggesting various improvements.
+The exercises were devised by David Thomas (course lecturer until 2017-18), and are nowadays maintained by [John Wickerson](https://johnwickerson.github.io/). I'd like to thank Benjamin Clemente, Quentin Corradi, Giannis Christodoulou, Yann Herklotz, Abraham Lin, Shuyuan Liu, James Nock, Michalis Pardalos, Simon Staal, and Samuel Wang for suggesting various improvements and corrections.

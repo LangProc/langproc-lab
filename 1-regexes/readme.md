@@ -3,13 +3,15 @@ Lab 1: Lexers and regular expressions
 
 This lab is about lexers and regular expressions. It is intended to give you enough working knowledge and experience to be able to design and implement the C lexer for your compiler.
 
-Please refer to [this helpful site](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.html) from the University of Virginia, for information on flex as a tool.\
-The [Rules page](https://www.cs.virginia.edu/~cr4bd/flex-manual/Patterns.html) is particular helpful regarding flex syntax.
+Changelog
+---------
+- **23-Jan-2025:** Added clarification that comments inside attributes should not count towards the number of comments removed.
+
 
 Specification
 -------------
 
-Write a tool using Flex that reads a stream of ASCII characters, and processes it, character by character, by applying the rules below. In what follows, a _line_ is defined as any maximal sub-sequence of the stream whose last character is a `newline` and which does not contain any other `newline` characters. You may assume that the final character in the whole stream is a `newline`.
+Write a tool using [Flex](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.html) that reads a stream of ASCII characters, and processes it, character by character, by applying the rules below. In what follows, a _line_ is defined as any maximal sub-sequence of the stream whose last character is a `newline` and which does not contain any other `newline` characters. You may assume that the final character in the whole stream is a `newline`.
 
 - The `//` sequence indicates the beginning of a _comment_. If `//` is encountered, remove it and the rest of the line.
 
@@ -19,7 +21,7 @@ Write a tool using Flex that reads a stream of ASCII characters, and processes i
 
 - If any other character is encountered, ignore it and move to the next character in the stream.
 
-Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed.
+Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed. _[**Edit 23-Jan-2025:** If a comment is nested inside an attribute, then it is automatically removed when the attribute is removed, and does not need removing explicitly; therefore, it doesn't count towards the number of comments removed. The [result](test/ref/09.stdout.txt) of [test 9](test/in/09.txt) clarifies this behaviour.]_
 
 As an example, if the input stream looks like this:
 
@@ -66,3 +68,5 @@ The components of the test are:
 - [`test/ref`](test/ref): The "golden" output for the given input files, which your program should match. There is one output for each input.
 
 - [`test_lexer.sh`](test_lexer.sh): A script that runs the tests. It will build your program, then apply it to each input in turn to produce a file in `test/out`. It will then use [diff](https://en.wikipedia.org/wiki/Diff_utility) to work out whether the output matches the reference output. You can run this script via the command: `./test_lexer.sh`.
+
+You may find the [Flex manual](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.html) helpful, particularly the [section about the syntax of patterns](https://www.cs.virginia.edu/~cr4bd/flex-manual/Patterns.html#Patterns).
