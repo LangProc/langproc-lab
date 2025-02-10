@@ -1,4 +1,4 @@
 param X
-params Y
+param Y
 add R X Y
 halt R
