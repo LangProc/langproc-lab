@@ -68,11 +68,8 @@ inline TreePtr Seq(std::initializer_list<TreePtr> statements)
 inline TreePtr While(TreePtr cond, TreePtr stat)
 { return std::make_shared<Tree>("While", cond, stat ); }
 
-//inline TreePtr IfElse(TreePtr cond, TreePtr stat1, TreePtr stat2)
-//{ return std::make_shared<Tree>("IfElse", cond, stat1, stat2); }
-
-inline TreePtr If(TreePtr cond, TreePtr stat1)
-{ return std::make_shared<Tree>("If", cond, stat1); }
+inline TreePtr If(TreePtr cond, TreePtr stat1, TreePtr stat2)
+{ return std::make_shared<Tree>("If", cond, stat1, stat2); }
 
 TreePtr Parse(
     std::istream &src
