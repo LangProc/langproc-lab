@@ -74,7 +74,7 @@ public:
         pc=it->second;
     }
 
-    bool step()
+    void step()
     {
         if(pc >= instructions.size() ){
             throw std::runtime_error("step : pc has exceeded number of instructions.");
