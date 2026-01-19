@@ -1,15 +1,15 @@
-Lab exercises for Compilers 2024/25
+Lab exercises for Compilers 2025/26
 ===============================================
 
 This repository contains the specifications for the three lab exercises for the Compilers module.
 
 The three exercises are:
 
-1 - [Lexers and regular expressions](1-regexes) (due Fri 30 Jan 2025 at 15:00).
+1 - [Lexers and regular expressions](1-regexes) (due Fri 30 Jan 2026 at 15:00).
 
-2 - [Parsers and ASTs](2-parsers) (due Fri 06 Feb 2025 at 15:00).
+2 - [Parsers and ASTs](2-parsers) (due Fri 06 Feb 2026 at 15:00).
 
-3 - [Code Generation](3-codegen) (due Fri 13 Feb 2025 at 15:00).
+3 - [Code Generation](3-codegen) (due Fri 13 Feb 2026 at 15:00).
 
 Rationale for deadlines: 
 
