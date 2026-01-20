@@ -1,0 +1,11 @@
+# generally, personal configurations are not pushed to GitHub
+.vscode/
+
+# working directories and files, to be ignored in all sub-directories
+bin/
+out/
+*.o
+
+# if you really want to version these intermediate flex/bison files, sure?
+*.yy.*
+*.tab.*
