@@ -11,7 +11,7 @@ The three exercises are:
 
 3 - [Code Generation](3-codegen) (due Fri 13 Feb 2026 at 15:00).
 
-Rationale for deadlines: 
+Rationale for deadlines:
 
 - There are two lab sessions (19 Jan and 26 Jan) before the first exercise is due.
 - There is one further lab session (02 Feb) before the second exercise is due.
@@ -56,7 +56,7 @@ This repository contains a [Dockerfile](Dockerfile), which is a script that sets
 You can enter the virtual machine described by the Dockerfile by going to the directory that contains the Dockerfile and running the following series of commands. First, create the virtual machine "image" by running:
 
     docker build -t "compilers_labs" .
-	
+
 (The `.` at the end is part of the command, by the way. It tells Docker to look in the current directory for the Dockerfile script.) Then create a "container" so that you can enter the virtual machine by running:
 
     docker run -it -v "`pwd`:`pwd`" -w "`pwd`" --name "compilers_labs_machine" compilers_labs
@@ -64,18 +64,18 @@ You can enter the virtual machine described by the Dockerfile by going to the di
 If you're running Windows, you need a slightly different command:
 
     docker run -it -v "${PWD}:/workspace" -w "/workspace" --name "compilers_labs_machine" compilers_labs
-	
-You are now in an Ubuntu 22.04 shell with all the required tools installed. (By the way, the `-it` flag instructs Docker to create a shell through which you can interact with the virtual machine. The `-v pwd:pwd` and `-w pwd` flags mean that your host machine's files are accessible to your virtual machine.) 
+
+You are now in an Ubuntu 22.04 shell with all the required tools installed. (By the way, the `-it` flag instructs Docker to create a shell through which you can interact with the virtual machine. The `-v pwd:pwd` and `-w pwd` flags mean that your host machine's files are accessible to your virtual machine.)
 
 When you're finished, you can leave the shell by typing:
 
     exit
-	
+
 If you want to clean up, you can remove the container you created by typing:
 
 	docker ps -a
 	docker rm compilers_labs_machine
-	
+
 and then removing the image by typing:
 
 	docker images
@@ -130,7 +130,7 @@ If you want to stop the machine,
 
 If you later run `vagrant up` again, it will not need to download the VM from scratch.
 
-	
+
 ## WSL (Windows only)
 - [Windows
 Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about)
