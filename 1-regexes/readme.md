@@ -5,6 +5,7 @@ This lab is about lexers and regular expressions. It is intended to give you eno
 
 Changelog
 ---------
+- **26-Jan-2026:** Added clarification that the "Number of comments" message does not start a new line if the preceding `\n` was deleted when a comment was removed.
 - **23-Jan-2025:** Added clarification that comments inside attributes should not count towards the number of comments removed.
 
 
@@ -21,7 +22,11 @@ Write a tool using [Flex](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.h
 
 - If any other character is encountered, ignore it and move to the next character in the stream.
 
-Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed. _[**Edit 23-Jan-2025:** If a comment is nested inside an attribute, then it is automatically removed when the attribute is removed, and does not need removing explicitly; therefore, it doesn't count towards the number of comments removed. The [result](test/ref/09.stdout.txt) of [test 9](test/in/09.txt) clarifies this behaviour.]_
+Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed. 
+
+_[**Edit 23-Jan-2025:** If a comment is nested inside an attribute, then it is automatically removed when the attribute is removed, and does not need removing explicitly; therefore, it doesn't count towards the number of comments removed. The [result](test/ref/09.stdout.txt) of [test 9](test/in/09.txt) clarifies this behaviour.]_
+
+_[**Edit 26-Jan-2026:** If you remove a comment from the last line of the input, then the "Number of comments" message should appear on that line, not on a new line by itself.]_
 
 As an example, if the input stream looks like this:
 
