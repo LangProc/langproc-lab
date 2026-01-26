@@ -1,0 +1,2 @@
+# don't push the tester's working directory, these are temporary files
+working/
