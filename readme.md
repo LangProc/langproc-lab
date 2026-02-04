@@ -9,7 +9,7 @@ The three exercises are:
 
 2 - [Parsers and ASTs](2-parsers) (due Fri 06 Feb 2026 at 15:00).
 
-3 - [Code Generation](3-codegen) (due Fri 13 Feb 2026 at 15:00).
+3 - [Code Generation](3-codegen) (due Fri ~~13~~ **20** Feb 2026 at 15:00). **[EDIT: I've given an extra week to do Lab 3, as you have mid-term exams for other modules.]**
 
 Rationale for deadlines:
 
