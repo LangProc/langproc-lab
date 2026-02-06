@@ -5,6 +5,8 @@ This lab is about lexers and regular expressions. It is intended to give you eno
 
 Changelog
 ---------
+- **26-Jan-2026#3:** For 267 cohort - Reworded `\` rule to only ignore the following character, instead of up to the next whitespace
+- **26-Jan-2026#2:** For 267 cohort - Reworded `//` rule to not remove final newline of a line (as this can lead to awkward behaviours)
 - **26-Jan-2026:** Added clarification that the "Number of comments" message does not start a new line if the preceding `\n` was deleted when a comment was removed.
 - **23-Jan-2025:** Added clarification that comments inside attributes should not count towards the number of comments removed.
 
@@ -14,15 +16,15 @@ Specification
 
 Write a tool using [Flex](https://www.cs.virginia.edu/~cr4bd/flex-manual/index.html) that reads a stream of ASCII characters, and processes it, character by character, by applying the rules below. In what follows, a _line_ is defined as any maximal sub-sequence of the stream whose last character is a `newline` and which does not contain any other `newline` characters. You may assume that the final character in the whole stream is a `newline`.
 
-- The `//` sequence indicates the beginning of a _comment_. If `//` is encountered, remove it and the rest of the line.
+- The `//` sequence indicates the beginning of a _comment_. If `//` is encountered, remove it and all non-newline characters contained in the rest of the line.
 
-- The `\` character indicates the beginning of an _escaped identifier_. If `\` is encountered, ignore it and move to the next space or `newline` in the stream.
+- The `\` character indicates the beginning of an _escaped identifier_. If `\` is encountered, ignore the following character and move to the next next character in the stream, e.g. `\abc` -> ignore `a` and continue lexing from `b`
 
 - The `(*` sequence indicates the beginning of an _attribute_. If `(*` is encountered, remove it, and then remove all characters up to and including the end of the attribute. The end of the attribute is the next occurrence of `*)` that is _not_ part of an escaped identifier and is _not_ part of a comment. The end of the attribute may either be on the same line or on a subsequent line. If there is no end of the attribute, then this rule does not apply.
 
 - If any other character is encountered, ignore it and move to the next character in the stream.
 
-Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed. 
+Finally, the tool should add a line to the end of its output that says `Number of comments and attributes removed: n.` where `n` is the number of comments and attributes that have been removed.
 
 _[**Edit 23-Jan-2025:** If a comment is nested inside an attribute, then it is automatically removed when the attribute is removed, and does not need removing explicitly; therefore, it doesn't count towards the number of comments removed. The [result](test/ref/09.stdout.txt) of [test 9](test/in/09.txt) clarifies this behaviour.]_
 
