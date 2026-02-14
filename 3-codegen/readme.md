@@ -219,5 +219,4 @@ The test script `./test_compiler.sh` applies the compiler to the existing input 
 
 Submission
 ----------
-
-As before: commit, test, push to GitHub, hash to Blackboard.
+Passing all given tests is worth 50% of the marks, with the remaining marks coming from unseen test-cases. As before: commit, test, push to GitHub, hash to Blackboard.
